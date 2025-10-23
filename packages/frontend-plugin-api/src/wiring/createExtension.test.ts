@@ -216,6 +216,20 @@ describe('createExtension', () => {
     );
   });
 
+  it('should create an extension with a relative attachment point', () => {
+    const extension = createExtension({
+      attachTo: [
+        { relative: { kind: 'page' }, input: 'tabs' },
+        { relative: { kind: 'page', name: 'index' }, input: 'tabs' },
+      ],
+      output: [stringDataRef],
+      factory: () => [stringDataRef('bar')],
+    });
+    expect(String(extension)).toBe(
+      'ExtensionDefinition{attachTo=page:<plugin>@tabs+page:<plugin>/index@tabs}',
+    );
+  });
+
   it('should create an extension with input', () => {
     const extension = createExtension({
       attachTo: { id: 'root', input: 'default' },
