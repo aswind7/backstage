@@ -167,88 +167,91 @@ const config: Config = {
         id: '@docusaurus/plugin-client-redirects',
         toExtensions: [],
         fromExtensions: [],
-        redirects: process.env.VERSION==='next' ? [] :[
-          {
-            from: '/docs',
-            to: '/docs/overview/what-is-backstage',
-          },
-          {
-            from: '/docs/features/software-catalog/software-catalog-overview',
-            to: '/docs/features/software-catalog/',
-          },
-          {
-            from: '/docs/features/software-templates/software-templates-index',
-            to: '/docs/features/software-templates/',
-          },
-          {
-            from: '/docs/features/techdocs/techdocs-overview',
-            to: '/docs/features/techdocs/',
-          },
-          {
-            from: '/docs/features/kubernetes/overview',
-            to: '/docs/features/kubernetes/',
-          },
-          {
-            from: '/docs/features/search/search-overview',
-            to: '/docs/features/search/',
-          },
-          {
-            from: '/docs/getting-started/running-backstage-locally',
-            to: '/docs/getting-started/',
-          },
-          {
-            from: '/docs/features/software-templates/testing-scaffolder-alpha',
-            to: '/docs/features/software-templates/migrating-to-rjsf-v5',
-          },
-          {
-            from: '/docs/auth/glossary',
-            to: '/docs/references/glossary',
-          },
-          {
-            from: '/docs/overview/glossary',
-            to: '/docs/references/glossary',
-          },
-          {
-            from: '/docs/getting-started/create-an-app',
-            to: '/docs/getting-started/',
-          },
-          {
-            from: '/docs/getting-started/configuration',
-            to: '/docs/getting-started/#next-steps',
-          },
-          {
-            from: '/docs/features/software-templates/authorizing-parameters-steps-and-actions',
-            to: '/docs/features/software-templates/authorizing-scaffolder-template-details',
-          },
-          {
-            from: '/docs/local-dev/cli-commands/',
-            to: '/docs/tooling/cli/commands/',
-          },
-          {
-            from: '/docs/local-dev/cli-build-system/',
-            to: '/docs/tooling/cli/build-system/',
-          },
-          {
-            from: '/docs/local-dev/cli-overview/',
-            to: '/docs/tooling/cli/overview/',
-          },
-          {
-            from: '/docs/local-dev/linking-local-packages/',
-            to: '/docs/tooling/local-dev/linking-local-packages',
-          },
-          {
-            from: '/docs/local-dev/debugging/',
-            to: '/docs/tooling/local-dev/debugging',
-          },
-          {
-            from: '/docs/plugins/url-reader/',
-            to: '/docs/backend-system/core-services/url-reader',
-          },
-          {
-            from: '/docs/getting-started/app-custom-theme',
-            to: '/docs/conf/user-interface',
-          },
-        ],
+        redirects:
+          process.env.VERSION === 'next'
+            ? []
+            : [
+                {
+                  from: '/docs',
+                  to: '/docs/overview/what-is-backstage',
+                },
+                {
+                  from: '/docs/features/software-catalog/software-catalog-overview',
+                  to: '/docs/features/software-catalog/',
+                },
+                {
+                  from: '/docs/features/software-templates/software-templates-index',
+                  to: '/docs/features/software-templates/',
+                },
+                {
+                  from: '/docs/features/techdocs/techdocs-overview',
+                  to: '/docs/features/techdocs/',
+                },
+                {
+                  from: '/docs/features/kubernetes/overview',
+                  to: '/docs/features/kubernetes/',
+                },
+                {
+                  from: '/docs/features/search/search-overview',
+                  to: '/docs/features/search/',
+                },
+                {
+                  from: '/docs/getting-started/running-backstage-locally',
+                  to: '/docs/getting-started/',
+                },
+                {
+                  from: '/docs/features/software-templates/testing-scaffolder-alpha',
+                  to: '/docs/features/software-templates/migrating-to-rjsf-v5',
+                },
+                {
+                  from: '/docs/auth/glossary',
+                  to: '/docs/references/glossary',
+                },
+                {
+                  from: '/docs/overview/glossary',
+                  to: '/docs/references/glossary',
+                },
+                {
+                  from: '/docs/getting-started/create-an-app',
+                  to: '/docs/getting-started/',
+                },
+                {
+                  from: '/docs/getting-started/configuration',
+                  to: '/docs/getting-started/#next-steps',
+                },
+                {
+                  from: '/docs/features/software-templates/authorizing-parameters-steps-and-actions',
+                  to: '/docs/features/software-templates/authorizing-scaffolder-template-details',
+                },
+                {
+                  from: '/docs/local-dev/cli-commands/',
+                  to: '/docs/tooling/cli/commands/',
+                },
+                {
+                  from: '/docs/local-dev/cli-build-system/',
+                  to: '/docs/tooling/cli/build-system/',
+                },
+                {
+                  from: '/docs/local-dev/cli-overview/',
+                  to: '/docs/tooling/cli/overview/',
+                },
+                {
+                  from: '/docs/local-dev/linking-local-packages/',
+                  to: '/docs/tooling/local-dev/linking-local-packages',
+                },
+                {
+                  from: '/docs/local-dev/debugging/',
+                  to: '/docs/tooling/local-dev/debugging',
+                },
+                {
+                  from: '/docs/plugins/url-reader/',
+                  to: '/docs/backend-system/core-services/url-reader',
+                },
+                {
+                  from: '/docs/getting-started/app-custom-theme',
+                  to: '/docs/conf/user-interface',
+                },
+              ],
       }),
     [
       'docusaurus-pushfeedback',
