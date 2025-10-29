@@ -30,31 +30,6 @@ backstageTheme.plain.backgroundColor = '#232323';
 
 const useVersionedDocs = require('fs').existsSync('versions.json');
 
-// This patches the redirect plugin to ignore the error when it tries to override existing fields.
-// This lets us add redirects that only apply to the next docs, while the stable docs still contain the source path.
-const PatchedRedirectPlugin: typeof RedirectPlugin = (ctx, opts) => {
-  const plugin = RedirectPlugin(ctx, opts);
-
-  return {
-    ...plugin,
-    async postBuild(...args) {
-      try {
-        await plugin.postBuild(...args);
-      } catch (error) {
-        if (
-          error.message ===
-          'The redirect plugin is not supposed to override existing files.'
-        ) {
-          // Bit of a hack to make sure all remaining redirects are written, since the write uses Promise.all
-          await new Promise(resolve => setTimeout(resolve, 1000));
-        } else {
-          throw error;
-        }
-      }
-    },
-  };
-};
-
 const defaultOpenApiOptions = {
   hideSendButton: true,
   sidebarOptions: {
@@ -188,11 +163,11 @@ const config: Config = {
       },
     }),
     ctx =>
-      PatchedRedirectPlugin(ctx, {
+      RedirectPlugin(ctx, {
         id: '@docusaurus/plugin-client-redirects',
         toExtensions: [],
         fromExtensions: [],
-        redirects: [
+        redirects: process.env.VERSION==='next' ? [] :[
           {
             from: '/docs',
             to: '/docs/overview/what-is-backstage',

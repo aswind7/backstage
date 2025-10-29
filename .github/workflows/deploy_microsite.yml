@@ -272,7 +272,7 @@ jobs:
           name: stable-openapi-docs
           path: docs
 
-      - name: grab lastest releases docs
+      - name: grab latest releases docs
         run: |
           git fetch origin master --depth 1
           git checkout FETCH_HEAD -- docs/releases
@@ -307,7 +307,7 @@ jobs:
           path: docs
 
       - name: build microsite
-        run: yarn build
+        run: VERSION=next yarn build
         working-directory: microsite
 
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
