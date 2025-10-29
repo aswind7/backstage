@@ -1,5 +1,11 @@
 # @backstage/plugin-signals
 
+## 0.0.25-next.1
+
+### Patch Changes
+
+- 71c22f3: Removed/moved unused dependencies
+
 ## 0.0.25-next.0
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @backstage/plugin-signals-backend
 
+## 0.3.10-next.1
+
+### Patch Changes
+
+- 71c22f3: Removed/moved unused dependencies
+
 ## 0.3.10-next.0
 
 ### Patch Changes

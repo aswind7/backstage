@@ -1,5 +1,11 @@
 # @backstage/plugin-search-backend-module-elasticsearch
 
+## 1.7.8-next.1
+
+### Patch Changes
+
+- 71c22f3: Removed/moved unused dependencies
+
 ## 1.7.8-next.0
 
 ### Patch Changes

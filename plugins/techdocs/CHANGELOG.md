@@ -1,5 +1,11 @@
 # @backstage/plugin-techdocs
 
+## 1.15.3-next.1
+
+### Patch Changes
+
+- 71c22f3: Removed/moved unused dependencies
+
 ## 1.15.2-next.0
 
 ### Patch Changes

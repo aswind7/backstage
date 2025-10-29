@@ -1,5 +1,11 @@
 # @backstage/plugin-kubernetes-backend
 
+## 0.20.4-next.1
+
+### Patch Changes
+
+- 71c22f3: Removed/moved unused dependencies
+
 ## 0.20.4-next.0
 
 ### Patch Changes
